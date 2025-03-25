@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Admission 2025</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .left {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .left h1 {
+            color: #f7931e;
+            font-size: 28px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: green;
+            font-size: 20px;
+            margin-top: 10px;
+            display: inline-block;
+            background-color: #004d1a;
+            padding: 10px;
+            color: white;
+        }
+
+        .checklist {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .checklist span {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .admission {
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .right {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+
+        .right h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .captcha {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .captcha img {
+            height: 40px;
+        }
+
+        .apply-btn {
+            width: 100%;
+            background-color: #f7931e;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .apply-btn:hover {
+            background-color: #e67e00;
+        }
+
+        .small-text {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Section -->
+    <div class="left">
+        <h1>A Bright Destination for your Ambitions</h1>
+        <span class="highlight">Diverse UG | PG & Ph.D. Programs</span>
+        <div class="checklist">
+            ✅ NAAC <span>'A'</span> Grade Accredited <br>
+            ✅ 36+ Year Longstanding Legacy
+        </div>
+        <div class="admission">Admissions Open <span style="color: orange;">2025</span></div>
+    </div>
+
+    <!-- Right Section - Form -->
+    <div class="right">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label>Enter Name *</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label>Enter Email Address *</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label>Enter Mobile Number *</label>
+                <input type="tel" id="mobile" required>
+            </div>
+            <div class="form-group">
+                <label>Any Password of Your Choice *</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label>Select State *</label>
+                <select id="state">
+                    <option value="">Select State</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Punjab">Punjab</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Select City *</label>
+                <select id="city">
+                    <option value="">Select City</option>
+                    <option value="Meerut">Meerut</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Ludhiana">Ludhiana</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Select Program *</label>
+                <select id="program">
+                    <option value="">Select Program</option>
+                    <option value="M.Tech">M.Tech</option>
+                    <option value="MBA">MBA</option>
+                    <option value="MCA">MCA</option>
+                </select>
+            </div>
+            <div class="form-group captcha">
+                <img src="captcha.png" alt="Captcha">
+                <input type="text" placeholder="Enter captcha">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="agree" required> 
+                I agree to receive information by signing up.
+            </div>
+            <button type="submit" class="apply-btn">APPLY NOW ➤</button>
+        </form>
+        <p class="small-text">Resend Verification Email</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let mobile = document.getElementById("mobile").value;
+        let password = document.getElementById("password").value;
+        let state = document.getElementById("state").value;
+        let city = document.getElementById("city").value;
+        let program = document.getElementById("program").value;
+
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Mobile:", mobile);
+        console.log("Password:", password);
+        console.log("State:", state);
+        console.log("City:", city);
+        console.log("Program:", program);
+
+        alert("Registration Successful! Your details have been submitted.");
+    });
+</script>
+
+</body>
+</html>
